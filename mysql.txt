@@ -1,0 +1,8 @@
+20250711 10:05:23|localhost|root|192.168.1.10|QUERY|testdb|SELECT * FROM users;|0
+20250711 10:06:45|localhost|admin|192.168.1.11|QUERY|finance|DROP TABLE employees;|0
+20250711 10:07:12|localhost|guest|192.168.1.12|QUERY|sales|UPDATE orders SET status='cancelled' WHERE id=5;|0
+20250711 10:07:50|localhost|root|192.168.1.10|QUERY|testdb|INSERT INTO users VALUES (3, 'Carol');|0
+20250711 10:08:10|localhost|admin|192.168.1.11|QUERY|finance|GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%';|0
+20250711 10:09:30|localhost|intruder|10.10.10.10|QUERY|unknown|SELECT * FROM users WHERE name='admin' OR '1'='1';|1045
+20250711 10:10:11|localhost|test|192.168.1.15|QUERY|testdb|SELECT SLEEP(5);|0
+20250711 10:11:00|localhost|john|192.168.1.20|QUERY|hr|DELETE FROM employees WHERE id=7;|0

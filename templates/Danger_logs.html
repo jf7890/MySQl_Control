@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danger Logs</title>
+</head>
+<body>
+    <form action="{{ url_for('routes.index') }}">
+    <button type="submit">Về trang chủ</button>
+    </form>
+    <form action="{{ url_for('routes.watch_logs') }}">
+    <button type="submit">Xem Raw Logs</button>
+    </form>
+        <table>
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>Hostname</th>
+                <th>Username</th>
+                <th>IP</th>
+                <th>Event</th>
+                <th>Database</th>
+                <th>Query</th>
+                <th>Error</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log in logs %}
+            <tr>
+                <td>{{ log.timestamp }}</td>
+                <td>{{ log.hostname }}</td>
+                <td>{{ log.username }}</td>
+                <td>{{ log.ip }}</td>
+                <td>{{ log.event }}</td>
+                <td>{{ log.database }}</td>
+                <td>{{ log.query }}</td>
+                <td>{{ log.error }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

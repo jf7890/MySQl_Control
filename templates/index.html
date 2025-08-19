@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MySQL Control</h1>
+    <form action="{{ url_for('routes.watch_logs') }}">
+    <button type="submit">Xem Raw Logs</button>
+    </form>
+    <form action="{{ url_for('routes.danger_logs') }}">
+    <button type="submit">Xem Danger Logs</button>
+    </form>
+</body>
+</html>
