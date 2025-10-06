@@ -1,5 +1,5 @@
 mode: immediate
 autoLinkIssue: true
 silent: false
-branchName: '${issue.number}-${issue.title,}'
+branchName: full
 gitSafeReplacementChar: '-'
