@@ -1,7 +1,7 @@
 mode: immediate
 autoLinkIssue: true
 silent: false
-branchName: '${issue.number}-${%SOME_VAR}-${issue.title}'
+branchName: '${issue.number}-${issue.title}'
 gitSafeReplacementChar: '-'
 branches:
   - label: "type: feature 🔨"
@@ -13,4 +13,4 @@ branches:
   - label: "type: documentation ✏️"
     prefix: docs/
   - label: "*"
-    skip: true
+    prefix: issue/
