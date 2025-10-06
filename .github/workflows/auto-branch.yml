@@ -1,20 +1,11 @@
-name: Auto Create Branch for Issue
-
 on:
   issues:
-    types: [opened]
-
-permissions:
-  contents: write
-
+    types: [ opened ]
 jobs:
-  create_branch:
+  create_issue_branch_job:
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Create branch for issue
+      - name: Create Issue Branch
         uses: robvanderleek/create-issue-branch@main
-        with:
-          base: main
-          token: ${{ secrets.TEST_ACT }}
-          
+        env:
+          GITHUB_TOKEN: ${{ secrets.TEST_ACT }}
