@@ -3,6 +3,8 @@ autoLinkIssue: true
 silent: false
 branchName: '${issue.number}-${issue.title}'
 gitSafeReplacementChar: '-'
+autoLinkIssue: true
+autoCloseIssue: true
 branches:
   - label: "type: feature 🔨"
     prefix: feat/
