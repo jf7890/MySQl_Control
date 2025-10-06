@@ -1,3 +1,4 @@
+name: Auto Branch
 on:
   issues:
     types: [opened, reopened]

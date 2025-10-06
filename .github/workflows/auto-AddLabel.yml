@@ -5,14 +5,14 @@ on:
     types: opened
 
 jobs:
-  add_label:
+  add-label:
+    name: Add Label
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-
-      - name: add label
-        uses: actions-ecosystem/action-add-labels@v1
-        if: ${{ startsWith(github.event.comment.body, '/add-labels') }}
+      - uses: actions/checkout@v2
+      - uses: tella-adam/add-labels@v1
         with:
-          labels: documentation
+          labels:
+            documentation
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
