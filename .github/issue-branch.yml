@@ -4,3 +4,4 @@ gitSafeReplacementChar: '-'
 autoCloseIssue: true
 autoLinkIssue: true
 autoDeleteBranch: true
+branchName: tiny
