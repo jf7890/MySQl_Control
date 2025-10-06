@@ -1,9 +1,7 @@
 mode: immediate
 autoLinkIssue: true
-branchName: ${issue.number}-${issue.title}  
 commentMessage: 'Branch ${branchName} created for issue: ${issue.title}, Nhân đẹp trai vaicalon'
 gitSafeReplacementChar: '-'
-autoLinkIssue: true
 autoCloseIssue: true
 branches:
   - label: "type: feature 🔨"
