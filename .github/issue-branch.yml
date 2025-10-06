@@ -1,16 +1,6 @@
 mode: immediate
-autoLinkIssue: true
 commentMessage: 'Branch ${branchName} created for issue: ${issue.title}, Nhân đẹp trai vaicalon'
 gitSafeReplacementChar: '-'
 autoCloseIssue: true
-branches:
-  - label: "type: feature 🔨"
-    prefix: feat/
-  - label: "type: bug 🐛"
-    prefix: fix/
-  - label: "type: chore 🧺"
-    prefix: chore/
-  - label: "type: documentation ✏️"
-    prefix: docs/
-  - label: "*"
-    prefix: issue/
+autoLinkIssue: true
+autoDeleteBranch: true
