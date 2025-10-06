@@ -8,4 +8,4 @@ jobs:
       - name: Create Issue Branch
         uses: robvanderleek/create-issue-branch@main
         env:
-          GITHUB_TOKEN: ${{ secrets.TEST_ACT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
