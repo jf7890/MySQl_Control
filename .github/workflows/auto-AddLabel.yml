@@ -4,16 +4,20 @@ on:
   issues:
     types: opened
 
+permissions:
+  issues: write
+  pull-requests: write
+
 jobs:
   add-label:
     name: Add Label
+
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: tella-adam/add-labels@v1
+      - uses: actions/checkout@v4.2.2
+      - uses: okineadev/add-labels@v1.0.5
         with:
-          issue-number: 1
-          labels:
-            documentation
+          labels: documentation
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
