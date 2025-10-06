@@ -1,6 +1,6 @@
 on:
   issues:
-    types: [opened, reopened]
+    types: [opened]
 jobs:
   create-issue-branch:
     name: "create issue branch"

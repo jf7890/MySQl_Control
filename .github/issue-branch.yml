@@ -1,7 +1,7 @@
 mode: immediate
 autoLinkIssue: true
 silent: false
-branchName: full
+branchName: '${issue.number}-${%SOME_VAR}-${issue.title}'
 gitSafeReplacementChar: '-'
 branches:
   - label: "type: feature 🔨"
