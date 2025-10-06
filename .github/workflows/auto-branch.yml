@@ -16,6 +16,5 @@ jobs:
         uses: robvanderleek/create-issue-branch@main
         with:
           base: main
-        env:
-          GITHUB_TOKEN: ${{ secrets.TEST_ACT }}
+          token: ${{ secrets.TEST_ACT }}
           
