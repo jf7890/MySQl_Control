@@ -1,0 +1,11 @@
+version: 1
+issues: True
+
+labels:
+  - label: "documentation"
+    type: "pull_request"
+    title: ".*"
+
+  - label: "documentation"
+    type: "issue"
+    title: ".*"
