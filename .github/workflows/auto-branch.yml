@@ -1,11 +1,13 @@
 on:
   issues:
-    types: [ opened ]
+    types: [opened, reopened]
 jobs:
-  create_issue_branch_job:
+  create-issue-branch:
+    name: "create issue branch"
     runs-on: ubuntu-latest
     steps:
-      - name: Create Issue Branch
-        uses: robvanderleek/create-issue-branch@main
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: create the issue branch
+        uses: robvanderleek/create-issue-branch@master
+        id: create-issue-branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

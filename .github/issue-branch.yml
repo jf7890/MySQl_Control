@@ -3,3 +3,14 @@ autoLinkIssue: true
 silent: false
 branchName: full
 gitSafeReplacementChar: '-'
+branches:
+  - label: "type: feature 🔨"
+    prefix: feat/
+  - label: "type: bug 🐛"
+    prefix: fix/
+  - label: "type: chore 🧺"
+    prefix: chore/
+  - label: "type: documentation ✏️"
+    prefix: docs/
+  - label: "*"
+    skip: true
